@@ -10,12 +10,14 @@ func MergeSort(list []int) []int {
 	mid := listLength / 2
 	left := MergeSort(list[:mid])
 	right := MergeSort(list[mid:])
-	return merge(left, right)
+	return Merge(left, right)
 
 }
 
-// merge is a helper function for MergeSort
-func merge(left, right []int) []int {
+// Merge is a helper function for MergeSort
+// Example:
+// 	Merge([]int{2,0,3},[]int{-1,0 -2}) -> []int{-1, 0, -2, 2, 0, 3}
+func Merge(left, right []int) []int {
 	ret := make([]int, 0, len(left)+len(right))
 	for len(left) > 0 || len(right) > 0 {
 		if len(left) == 0 {
