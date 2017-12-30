@@ -1,6 +1,10 @@
-package sorts
+package sorts_test
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/KevinBoyette/GoAlgorithms/src/sorts"
+)
 
 func TestBubbleSort(t *testing.T) {
 	testTable := []struct {
@@ -17,7 +21,7 @@ func TestBubbleSort(t *testing.T) {
 
 	for _, test := range testTable {
 		t.Run(test.testName, func(t *testing.T) {
-			actual := BubbleSort(test.testParam)
+			actual := sorts.BubbleSort(test.testParam)
 			expected := test.expected
 			testCase := true
 			for index := range actual {

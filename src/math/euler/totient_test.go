@@ -1,6 +1,10 @@
-package euler
+package euler_test
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/KevinBoyette/GoAlgorithms/src/math/euler"
+)
 
 func TestEulerTotient(t *testing.T) {
 	testTable := []struct {
@@ -15,7 +19,7 @@ func TestEulerTotient(t *testing.T) {
 
 	for _, test := range testTable {
 		t.Run(test.testName, func(t *testing.T) {
-			actual := Totient(test.testParam)
+			actual := euler.Totient(test.testParam)
 			expected := test.expected
 			if actual != expected {
 				t.Errorf("During %s; expected %v and got %v",

@@ -1,7 +1,11 @@
-package str
+package str_test
 
 // Named str because strings and string are keywords
-import "testing"
+import (
+	"testing"
+
+	"github.com/KevinBoyette/GoAlgorithms/src/str"
+)
 
 func TestReverseString(t *testing.T) {
 	testTable := []struct {
@@ -17,7 +21,7 @@ func TestReverseString(t *testing.T) {
 
 	for _, test := range testTable {
 		t.Run(test.testName, func(t *testing.T) {
-			actual := Reverse(test.testParam)
+			actual := str.Reverse(test.testParam)
 			expected := test.expected
 			if actual != expected {
 				t.Errorf("During %s; expected %v and got %v",

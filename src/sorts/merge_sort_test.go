@@ -1,6 +1,10 @@
 package sorts
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/KevinBoyette/GoAlgorithms/src/sorts"
+)
 
 func TestMergeSort(t *testing.T) {
 	testTable := []struct {
@@ -18,7 +22,7 @@ func TestMergeSort(t *testing.T) {
 
 	for _, test := range testTable {
 		t.Run(test.testName, func(t *testing.T) {
-			actual := MergeSort(test.testParam)
+			actual := sorts.MergeSort(test.testParam)
 			expected := test.expected
 			testCase := true
 			for index := range actual {
@@ -54,7 +58,7 @@ func TestMerge(t *testing.T) {
 
 	for _, test := range testTable {
 		t.Run(test.testName, func(t *testing.T) {
-			actual := Merge(test.testParamX, test.testParamY)
+			actual := sorts.Merge(test.testParamX, test.testParamY)
 			expected := test.expected
 			testCase := true
 			for index := range actual {

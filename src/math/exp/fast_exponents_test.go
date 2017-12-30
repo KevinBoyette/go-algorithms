@@ -1,6 +1,10 @@
-package exp
+package exp_test
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/KevinBoyette/GoAlgorithms/src/math/exp"
+)
 
 func TestFastExponents(t *testing.T) {
 	testTable := []struct {
@@ -20,7 +24,7 @@ func TestFastExponents(t *testing.T) {
 
 	for _, test := range testTable {
 		t.Run(test.testName, func(t *testing.T) {
-			actual := FastExponents(test.testParamX, test.testParamY)
+			actual := exp.FastExponents(test.testParamX, test.testParamY)
 			expected := test.expected
 			if actual != expected {
 				t.Errorf("During %s; expected %v and got %v",
