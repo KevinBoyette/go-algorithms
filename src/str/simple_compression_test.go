@@ -8,25 +8,24 @@ import (
 )
 
 func TestSimpleCompression(t *testing.T) {
-	testTable := []struct {
-		testName  string
+	cases := map[string]struct {
 		testParam string
 		expected  string
 	}{
-		{"testing SimpleCompression('aaaabbbccdaa')", "aaaabbbccdaa", "a4b3c2d1a2"},
-		{"testing SimpleCompression()", "", ""},
-		{"testing SimpleCompression('a')", "a", "a1"},
-		{"testing SimpleCompression('AAAABBBCCDAA')", "AAAABBBCCDAA", "a4b3c2d1a2"},
+		"SimpleCompression('aaaabbbccdaa')": {"aaaabbbccdaa", "a4b3c2d1a2"},
+		"SimpleCompression()":               {"", ""},
+		"SimpleCompression('a')":            {"a", "a1"},
+		"SimpleCompression('AAAABBBCCDAA')": {"AAAABBBCCDAA", "a4b3c2d1a2"},
 	}
 
-	for _, test := range testTable {
-		t.Run(test.testName, func(t *testing.T) {
-			actual := str.SimpleCompression(test.testParam)
-			expected := test.expected
+	for name, tc := range cases {
+		t.Run(name, func(t *testing.T) {
+			actual := str.SimpleCompression(tc.testParam)
+			expected := tc.expected
 			if actual != expected {
 				t.Errorf("During %s; expected %v and got %v",
-					test.testName,
-					test.expected,
+					name,
+					tc.expected,
 					actual,
 				)
 			}

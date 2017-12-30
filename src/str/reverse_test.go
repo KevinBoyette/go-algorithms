@@ -8,25 +8,24 @@ import (
 )
 
 func TestReverseString(t *testing.T) {
-	testTable := []struct {
-		testName  string
+	cases := map[string]struct {
 		testParam string
 		expected  string
 	}{
-		{"testing Reverse('hello')", "hello", "olleh"},
-		{"testing Reverse('racecar')", "racecar", "racecar"},
-		{"testing Reverse()", "", ""},
-		{"testing Reverse('a')", "a", "a"},
+		"Reverse('hello')":   {"hello", "olleh"},
+		"Reverse('racecar')": {"racecar", "racecar"},
+		"Reverse()":          {"", ""},
+		"Reverse('a')":       {"a", "a"},
 	}
 
-	for _, test := range testTable {
-		t.Run(test.testName, func(t *testing.T) {
-			actual := str.Reverse(test.testParam)
-			expected := test.expected
+	for name, tc := range cases {
+		t.Run(name, func(t *testing.T) {
+			actual := str.Reverse(tc.testParam)
+			expected := tc.expected
 			if actual != expected {
 				t.Errorf("During %s; expected %v and got %v",
-					test.testName,
-					test.expected,
+					name,
+					tc.expected,
 					actual,
 				)
 			}
