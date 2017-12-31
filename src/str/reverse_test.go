@@ -12,10 +12,10 @@ func TestReverseString(t *testing.T) {
 		testParam string
 		expected  string
 	}{
-		"Reverse('hello')":   {"hello", "olleh"},
-		"Reverse('racecar')": {"racecar", "racecar"},
-		"Reverse()":          {"", ""},
-		"Reverse('a')":       {"a", "a"},
+		"multiple words": {"hello world!", "!dlrow olleh"},
+		"palindrome":     {"racecar", "racecar"},
+		"empty string":   {"", ""},
+		"single letter":  {"a", "a"},
 	}
 
 	for name, tc := range cases {

@@ -12,10 +12,10 @@ func TestSimpleCompression(t *testing.T) {
 		testParam string
 		expected  string
 	}{
-		"SimpleCompression('aaaabbbccdaa')": {"aaaabbbccdaa", "a4b3c2d1a2"},
-		"SimpleCompression()":               {"", ""},
-		"SimpleCompression('a')":            {"a", "a1"},
-		"SimpleCompression('AAAABBBCCDAA')": {"AAAABBBCCDAA", "a4b3c2d1a2"},
+		"multiple instances of letters":             {"aaaabbbccdaa", "a4b3c2d1a2"},
+		"empty string":                              {"", ""},
+		"single letter":                             {"a", "a1"},
+		"multiple instances of letters in all caps": {"AAAABBBCCDAA", "a4b3c2d1a2"},
 	}
 
 	for name, tc := range cases {

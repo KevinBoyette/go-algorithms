@@ -12,13 +12,13 @@ func TestFastExponents(t *testing.T) {
 		testParamY int
 		expected   int
 	}{
-		"FastExponents(2,0)": {2, 0, 1},
+		"2^0": {2, 0, 1},
 		// TODO {"testing FastExponents(2,0)", 2, -1, .5},
 		// TODO {"testing FastExponents(2,0)", 2, -2, .25},
-		"FastExponents(2,3)":    {2, 3, 8},
-		"FastExponents(3,3)":    {3, 3, 27},
-		"FastExponents(16,8)":   {16, 8, 4294967296},
-		"FastExponents(1000,1)": {1000, 1, 1000},
+		"2^3":    {2, 3, 8},
+		"3^3":    {3, 3, 27},
+		"16^8":   {16, 8, 4294967296},
+		"1000^1": {1000, 1, 1000},
 	}
 
 	for name, tc := range cases {
