@@ -8,8 +8,9 @@ import (
 
 // Takes a sequence as input and returns
 // a compressed form
+//
 // Example:
-// SimpleCompression("aaaabbbccdaa") -> a4b3c2d1a2
+// 	SimpleCompression("aaaabbbccdaa") -> a4b3c2d1a2
 func SimpleCompression(sequence string) string {
 	sequenceLen := len(sequence)
 	sequence = strings.ToLower(sequence)

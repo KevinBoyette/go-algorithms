@@ -3,7 +3,7 @@ package fn
 import "fmt"
 
 // Reduce is not general. This function represents the
-// idea behind reduce
+// idea behind using reduce.
 func Reduce(f func(int) int, list []int) int {
 	var returnValue int
 	for index, listValue := range list {

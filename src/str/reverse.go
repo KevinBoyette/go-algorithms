@@ -1,7 +1,8 @@
 package str
 
-// Reverse takes a word or string and reverses the word
-// Example:
+// Reverse takes a word or string and reverses the word.
+//
+// Examples:
 // 		Reverse("hello") -> olleh
 // 		Reverse("racecar") -> racecar
 // 		Reverse("") -> ""

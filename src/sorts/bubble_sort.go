@@ -1,6 +1,7 @@
 package sorts
 
 // BubbleSort will sort a slice of ints
+//
 // You probably shouldn't use BubbleSort in a
 // real program
 func BubbleSort(list []int) []int {
