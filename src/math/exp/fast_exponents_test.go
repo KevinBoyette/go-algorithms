@@ -3,7 +3,7 @@ package exp_test
 import (
 	"testing"
 
-	"github.com/KevinBoyette/GoAlgorithms/src/math/exp"
+	"algorithms/src/math/exp"
 )
 
 func TestFastExponents(t *testing.T) {

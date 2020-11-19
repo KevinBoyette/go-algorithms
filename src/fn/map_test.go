@@ -1,9 +1,8 @@
 package fn_test
 
 import (
+	"algorithms/src/fn"
 	"testing"
-
-	"github.com/KevinBoyette/GoAlgorithms/src/fn"
 )
 
 func TestMapFunction(t *testing.T) {

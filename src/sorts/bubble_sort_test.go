@@ -3,7 +3,7 @@ package sorts_test
 import (
 	"testing"
 
-	"github.com/KevinBoyette/GoAlgorithms/src/sorts"
+	"algorithms/src/sorts"
 )
 
 func TestBubbleSort(t *testing.T) {

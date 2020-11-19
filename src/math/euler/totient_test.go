@@ -3,7 +3,7 @@ package euler_test
 import (
 	"testing"
 
-	"github.com/KevinBoyette/GoAlgorithms/src/math/euler"
+	"algorithms/src/math/euler"
 )
 
 func TestEulerTotient(t *testing.T) {

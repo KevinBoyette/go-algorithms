@@ -4,7 +4,7 @@ package str_test
 import (
 	"testing"
 
-	"github.com/KevinBoyette/GoAlgorithms/src/str"
+	"algorithms/src/str"
 )
 
 func TestReverseString(t *testing.T) {
