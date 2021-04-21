@@ -1,0 +1,17 @@
+name: GoAlgorithms
+on: [push, pull_request]
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Go Version
+        uses: actions/setup-go@v1
+        with:
+          go-version: 1.16
+
+      - name: Checkout Source
+        uses: actions/checkout@v1
+
+      - name: Run Tests
+        run: go test -v -cover ./...
