@@ -4,7 +4,7 @@ package str_test
 import (
 	"testing"
 
-	"github.com/KevinBoyette/GoAlgorithms/src/str"
+	"kevinboyette/algorithms/str"
 )
 
 func TestSimpleCompression(t *testing.T) {
