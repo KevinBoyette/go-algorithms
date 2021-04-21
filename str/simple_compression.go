@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// Takes a sequence as input and returns
-// a compressed form
+// SimpleCompression takes a sequence as input and returns
+// the input in compressed form
 //
 // Example:
 // 	SimpleCompression("aaaabbbccdaa") -> a4b3c2d1a2
