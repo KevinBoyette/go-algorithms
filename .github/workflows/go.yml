@@ -1,17 +1,29 @@
 name: GoAlgorithms
 on: [push, pull_request]
+
 jobs:
   build:
-    name: Build
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        go-version: ['^1.13.0', '^1.14.0', '^1.15.0', '^1.16.0']
     steps:
-      - name: Set up Go Version
-        uses: actions/setup-go@v1
+      - uses: actions/checkout@v2
+
+      - name: Setup Go ${{matrix.go-version}}
+        uses: actions/setup-go@v2
         with:
-          go-version: 1.16
+          go-version: ${{matrix.go-version}}
 
-      - name: Checkout Source
-        uses: actions/checkout@v1
+      - name: Install dependencies
+        run: |
+          go version
+          go get -u golang.org/x/lint/golint
 
-      - name: Run Tests
-        run: go test -v -cover ./...
+      - name: Linting
+        run: |
+          go vet ./...
+          golint ./...
+
+      - name: Run tests
+        run: go test -cover ./...
