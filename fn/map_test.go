@@ -3,7 +3,7 @@ package fn_test
 import (
 	"testing"
 
-	"github.com/KevinBoyette/GoAlgorithms/src/fn"
+	"kevinboyette/algorithms/fn"
 )
 
 func TestMapFunction(t *testing.T) {

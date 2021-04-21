@@ -3,7 +3,7 @@ package sorts_test
 import (
 	"testing"
 
-	"github.com/KevinBoyette/GoAlgorithms/src/sorts"
+	"kevinboyette/algorithms/sorts"
 )
 
 func TestMergeSort(t *testing.T) {
