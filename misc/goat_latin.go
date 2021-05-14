@@ -1,4 +1,4 @@
-package goat
+package misc
 
 import "strings"
 

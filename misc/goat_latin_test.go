@@ -1,4 +1,4 @@
-package goat_test
+package misc_test
 
 import (
 	goat "kevinboyette/algorithms/misc"
