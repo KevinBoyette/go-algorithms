@@ -31,3 +31,9 @@ func TestToCamelCase(t *testing.T) {
 	}
 
 }
+
+func BenchmarkToCamelCase(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		str.ToCamelCase("the-Weekend-warrior")
+	}
+}

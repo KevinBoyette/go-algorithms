@@ -1,7 +1,5 @@
 package fn
 
-import "fmt"
-
 // Reduce is not general. This function represents the
 // idea behind using reduce.
 func Reduce(f func(int) int, list []int) int {
@@ -13,7 +11,6 @@ func Reduce(f func(int) int, list []int) int {
 			returnValue += f(listValue)
 
 		}
-		fmt.Println(returnValue)
 	}
 	return returnValue
 }
