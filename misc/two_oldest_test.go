@@ -10,9 +10,11 @@ func TestTwoOldestAges(t *testing.T) {
 		param    []int
 		expected [2]int
 	}{
-		"simplest case":  {[]int{1, 2}, [2]int{2, 1}},
-		"already sorted": {[]int{1, 2, 3, 5}, [2]int{5, 3}},
-		"reversed":       {[]int{5, 4, 3, 2, 1}, [2]int{5, 4}},
+		"simplest case":      {[]int{1, 2}, [2]int{1, 2}},
+		"already sorted":     {[]int{1, 2, 3, 5}, [2]int{3, 5}},
+		"reversed":           {[]int{5, 4, 3, 2, 1}, [2]int{4, 5}},
+		"codewars example 1": {[]int{6, 5, 83, 5, 3, 18}, [2]int{18, 83}},
+		"codewars example 2": {[]int{1, 5, 87, 45, 8, 8}, [2]int{45, 87}},
 	}
 	for name, testCase := range cases {
 		t.Run(name, func(t *testing.T) {
