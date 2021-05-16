@@ -8,5 +8,5 @@ func TwoOldestAges(ages []int) [2]int {
 	// TODO: Use the QuickSelect algorithm
 	sort.Ints(ages)
 	i := len(ages) - 1
-	return [2]int{ages[i], ages[i-1]}
+	return [2]int{ages[i-1], ages[i]}
 }
