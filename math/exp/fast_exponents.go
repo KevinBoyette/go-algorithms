@@ -4,7 +4,7 @@ package exp
 // calculate the exponentiation faster than
 // the naive method.
 //
-func FastExponents(x int, y int) int {
+func FastExponents(x, y int) int {
 	result := 1
 	if y == 0 {
 		return 1
