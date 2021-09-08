@@ -1,5 +1,6 @@
 package misc
 
+// https://leetcode.com/problems/boats-to-save-people/
 import "sort"
 
 func NumRescueBoats(people []int, limit int) int {

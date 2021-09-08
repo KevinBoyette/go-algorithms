@@ -7,31 +7,40 @@ import (
 	"testing"
 )
 
-// TODO: move these tests into test table
-func TestNumRescueBoatsFirstCase(t *testing.T) {
-	people := []int{1, 2}
-	limit := 3
-	actual := boats.NumRescueBoats(people, limit)
-	expected := 1
-	if actual != expected {
-		t.Errorf("actual %d != expected %d", actual, expected)
+func TestNumRescueBoats(t *testing.T) {
+	cases := map[string]struct {
+		people   []int
+		limit    int
+		expected int
+	}{
+		"firstCase": {
+			[]int{1, 2},
+			3,
+			1,
+		},
+		"secondCase": {
+			[]int{3, 2, 2, 1},
+			3,
+			3,
+		},
+		"thirdCase": {
+			[]int{3, 5, 3, 4},
+			5,
+			4,
+		},
 	}
-}
-func TestNumRescueBoatsSecondCase(t *testing.T) {
-	people := []int{3, 2, 2, 1}
-	limit := 3
-	actual := boats.NumRescueBoats(people, limit)
-	expected := 3
-	if actual != expected {
-		t.Errorf("actual %d != expected %d", actual, expected)
-	}
-}
-func TestNumRescueBoatsThirdCase(t *testing.T) {
-	people := []int{3, 5, 3, 4}
-	limit := 5
-	actual := boats.NumRescueBoats(people, limit)
-	expected := 4
-	if actual != expected {
-		t.Errorf("actual %d != expected %d", actual, expected)
+	for name, testCase := range cases {
+		t.Run(name, func(t *testing.T) {
+			actual := boats.NumRescueBoats(testCase.people, testCase.limit)
+			expected := testCase.expected
+			if actual != expected {
+				t.Errorf("During %s; expected %v and got %v",
+					name,
+					expected,
+					actual,
+				)
+			}
+
+		})
 	}
 }
