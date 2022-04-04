@@ -1,7 +1,6 @@
-package misc_test
+package misc
 
 import (
-	"kevinboyette/algorithms/misc"
 	"testing"
 )
 
@@ -18,7 +17,7 @@ func TestTwoOldestAges(t *testing.T) {
 	}
 	for name, testCase := range cases {
 		t.Run(name, func(t *testing.T) {
-			actual := misc.TwoOldestAges(testCase.param)
+			actual := TwoOldestAges(testCase.param)
 			expected := testCase.expected
 			if actual != expected {
 				t.Errorf("During %s; expected %v and got %v",

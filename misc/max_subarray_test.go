@@ -1,7 +1,6 @@
-package misc_test
+package misc
 
 import (
-	subArray "kevinboyette/algorithms/misc"
 	"testing"
 )
 
@@ -29,7 +28,7 @@ func TestMaxSubArray(t *testing.T) {
 	}
 	for name, testCase := range cases {
 		t.Run(name, func(t *testing.T) {
-			actual := subArray.MaxSubArray(testCase.param)
+			actual := MaxSubArray(testCase.param)
 			expected := testCase.expected
 			if actual != expected {
 				t.Errorf("During %s; expected %v and got %v",

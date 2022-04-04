@@ -1,12 +1,10 @@
-package sorts_test
+package sorts
 
 import (
 	"testing"
-
-	"kevinboyette/algorithms/sorts"
 )
 
 func TestQuickSort(t *testing.T) {
 	cases := testTable()
-	runTests(sorts.QuickSortRecur, cases, t)
+	runTests(QuickSortRecur, cases, t)
 }

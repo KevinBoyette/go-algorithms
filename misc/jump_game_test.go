@@ -1,7 +1,6 @@
-package misc_test
+package misc
 
 import (
-	jump "kevinboyette/algorithms/misc"
 	"testing"
 )
 
@@ -21,7 +20,7 @@ func TestCanJump(t *testing.T) {
 	}
 	for name, testCase := range cases {
 		t.Run(name, func(t *testing.T) {
-			actual := jump.CanJump(testCase.input)
+			actual := CanJump(testCase.input)
 			expected := testCase.output
 			if actual != expected {
 				t.Errorf("During %s; expected %v and got %v",

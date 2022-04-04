@@ -1,16 +1,14 @@
-package fn_test
+package fn
 
 import (
 	"testing"
-
-	"kevinboyette/algorithms/fn"
 )
 
 func TestMapFunction(t *testing.T) {
 	cases := mapTestTable()
 	for name, tc := range cases {
 		t.Run(name, func(t *testing.T) {
-			actual := fn.Map(tc.testFunc, tc.testSlice)
+			actual := Map(tc.testFunc, tc.testSlice)
 			expected := tc.expected
 			testCase := true
 			for index := range actual {

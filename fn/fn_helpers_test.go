@@ -1,4 +1,4 @@
-package fn_test
+package fn
 
 type mapTestCase struct {
 	testFunc  func(int) int

@@ -1,7 +1,6 @@
-package misc_test
+package misc
 
 import (
-	unique "kevinboyette/algorithms/misc"
 	"testing"
 )
 
@@ -26,7 +25,7 @@ func TestSumOfUnique(t *testing.T) {
 
 	for name, testCase := range cases {
 		t.Run(name, func(t *testing.T) {
-			actual := unique.SumOfUniqueElements(testCase.param)
+			actual := SumOfUniqueElements(testCase.param)
 			expected := testCase.expected
 			if actual != expected {
 				t.Errorf("During %s; expected %v and got %v",

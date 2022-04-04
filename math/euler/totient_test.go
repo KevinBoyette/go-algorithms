@@ -1,9 +1,7 @@
-package euler_test
+package euler
 
 import (
 	"testing"
-
-	"kevinboyette/algorithms/math/euler"
 )
 
 func TestEulerTotient(t *testing.T) {
@@ -18,7 +16,7 @@ func TestEulerTotient(t *testing.T) {
 
 	for name, tc := range cases {
 		t.Run(name, func(t *testing.T) {
-			actual := euler.Totient(tc.testParam)
+			actual := Totient(tc.testParam)
 			expected := tc.expected
 			if actual != expected {
 				t.Errorf("During %s; expected %v and got %v",

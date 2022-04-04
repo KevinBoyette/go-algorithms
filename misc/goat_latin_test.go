@@ -1,7 +1,6 @@
-package misc_test
+package misc
 
 import (
-	goat "kevinboyette/algorithms/misc"
 	"testing"
 )
 
@@ -25,7 +24,7 @@ func TestGoatLatin(t *testing.T) {
 	}
 	for name, testCase := range cases {
 		t.Run(name, func(t *testing.T) {
-			actual := goat.ToGoatLatin(testCase.param)
+			actual := ToGoatLatin(testCase.param)
 			expected := testCase.expected
 			if actual != expected {
 				t.Errorf("During %s; expected %v and got %v",

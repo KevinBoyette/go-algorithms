@@ -1,9 +1,8 @@
-package misc_test
+package misc
 
 // https://leetcode.com/problems/boats-to-save-people/
 
 import (
-	boats "kevinboyette/algorithms/misc"
 	"testing"
 )
 
@@ -31,7 +30,7 @@ func TestNumRescueBoats(t *testing.T) {
 	}
 	for name, testCase := range cases {
 		t.Run(name, func(t *testing.T) {
-			actual := boats.NumRescueBoats(testCase.people, testCase.limit)
+			actual := NumRescueBoats(testCase.people, testCase.limit)
 			expected := testCase.expected
 			if actual != expected {
 				t.Errorf("During %s; expected %v and got %v",

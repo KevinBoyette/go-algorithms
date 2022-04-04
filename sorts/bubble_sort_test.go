@@ -1,12 +1,10 @@
-package sorts_test
+package sorts
 
 import (
 	"testing"
-
-	"kevinboyette/algorithms/sorts"
 )
 
 func TestBubbleSort(t *testing.T) {
 	cases := testTable()
-	runTests(sorts.BubbleSort, cases, t)
+	runTests(BubbleSort, cases, t)
 }
