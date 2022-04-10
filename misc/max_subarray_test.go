@@ -6,8 +6,8 @@ import (
 
 func TestMaxSubArray(t *testing.T) {
 	cases := map[string]struct {
-		param    []int
-		expected int
+		given []int
+		want  int
 	}{
 		"first case": {
 			[]int{-2, 1, -3, 4, -1, 2, 1, -5, 4},
@@ -26,14 +26,13 @@ func TestMaxSubArray(t *testing.T) {
 			-100000,
 		},
 	}
-	for name, testCase := range cases {
+	for name, tt := range cases {
 		t.Run(name, func(t *testing.T) {
-			actual := MaxSubArray(testCase.param)
-			expected := testCase.expected
-			if actual != expected {
+			actual := MaxSubArray(tt.given)
+			if actual != tt.want {
 				t.Errorf("During %s; expected %v and got %v",
 					name,
-					expected,
+					tt.want,
 					actual,
 				)
 			}

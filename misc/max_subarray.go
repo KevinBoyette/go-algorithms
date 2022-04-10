@@ -1,9 +1,5 @@
 package misc
 
-import (
-	"math"
-)
-
 func maxOf(x, y int) int {
 	if x < y {
 		return y
@@ -18,15 +14,21 @@ func maxOf(x, y int) int {
 //A subarray is a contiguous part of an array.
 //https://leetcode.com/problems/maximum-subarray/
 func MaxSubArray(nums []int) int {
-	maxSoFar := math.MinInt32
-	current := math.MinInt32
-	for _, i := range nums {
-		if current < 0 {
-			current = i
-		} else {
-			current += i
-		}
-		maxSoFar = maxOf(current, maxSoFar)
+	if len(nums) == 0 {
+		return 0
 	}
-	return maxSoFar
+	var (
+		maximumSum = nums[0]
+		numsLength = len(nums)
+	)
+
+	for i := 1; i < numsLength; i++ {
+		previous := nums[i-1]
+		if previous > 0 {
+			nums[i] += previous
+		}
+		maximumSum = maxOf(nums[i], maximumSum)
+	}
+
+	return maximumSum
 }
