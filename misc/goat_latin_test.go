@@ -6,8 +6,8 @@ import (
 
 func TestGoatLatin(t *testing.T) {
 	cases := map[string]struct {
-		param    string
-		expected string
+		given string
+		want  string
 	}{
 		"I speak Goat Latin": {
 			"I speak Goat Latin",
@@ -22,14 +22,13 @@ func TestGoatLatin(t *testing.T) {
 			"Eachmaa ordwmaaa onsistscmaaaa ofmaaaaa owercaselmaaaaaa andmaaaaaaa uppercasemaaaaaaaa etterslmaaaaaaaaa onlymaaaaaaaaaa",
 		},
 	}
-	for name, testCase := range cases {
+	for name, tt := range cases {
 		t.Run(name, func(t *testing.T) {
-			actual := ToGoatLatin(testCase.param)
-			expected := testCase.expected
-			if actual != expected {
+			actual := ToGoatLatin(tt.given)
+			if actual != tt.want {
 				t.Errorf("During %s; expected %v and got %v",
 					name,
-					testCase.expected,
+					tt.want,
 					actual,
 				)
 			}

@@ -28,10 +28,10 @@ func TestNumRescueBoats(t *testing.T) {
 			4,
 		},
 	}
-	for name, testCase := range cases {
+	for name, tt := range cases {
 		t.Run(name, func(t *testing.T) {
-			actual := NumRescueBoats(testCase.people, testCase.limit)
-			expected := testCase.expected
+			actual := NumRescueBoats(tt.people, tt.limit)
+			expected := tt.expected
 			if actual != expected {
 				t.Errorf("During %s; expected %v and got %v",
 					name,

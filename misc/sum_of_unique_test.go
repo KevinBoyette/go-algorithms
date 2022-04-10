@@ -6,8 +6,8 @@ import (
 
 func TestSumOfUnique(t *testing.T) {
 	cases := map[string]struct {
-		param    []int
-		expected int
+		given []int
+		want  int
 	}{
 		"First Case": {
 			[]int{1, 2, 3, 2},
@@ -23,14 +23,13 @@ func TestSumOfUnique(t *testing.T) {
 		},
 	}
 
-	for name, testCase := range cases {
+	for name, tt := range cases {
 		t.Run(name, func(t *testing.T) {
-			actual := SumOfUniqueElements(testCase.param)
-			expected := testCase.expected
-			if actual != expected {
+			actual := SumOfUniqueElements(tt.given)
+			if actual != tt.want {
 				t.Errorf("During %s; expected %v and got %v",
 					name,
-					testCase.expected,
+					tt.want,
 					actual,
 				)
 			}

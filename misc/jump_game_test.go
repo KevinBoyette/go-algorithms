@@ -18,10 +18,10 @@ func TestCanJump(t *testing.T) {
 			false,
 		},
 	}
-	for name, testCase := range cases {
+	for name, tt := range cases {
 		t.Run(name, func(t *testing.T) {
-			actual := CanJump(testCase.input)
-			expected := testCase.output
+			actual := CanJump(tt.input)
+			expected := tt.output
 			if actual != expected {
 				t.Errorf("During %s; expected %v and got %v",
 					name,

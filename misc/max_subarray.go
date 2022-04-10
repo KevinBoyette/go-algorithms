@@ -21,7 +21,6 @@ func MaxSubArray(nums []int) int {
 		maximumSum = nums[0]
 		numsLength = len(nums)
 	)
-
 	for i := 1; i < numsLength; i++ {
 		previous := nums[i-1]
 		if previous > 0 {
