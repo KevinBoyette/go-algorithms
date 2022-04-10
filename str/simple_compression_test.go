@@ -1,16 +1,14 @@
-package str_test
+package str
 
 // Named str because strings and string are keywords
 import (
 	"testing"
-
-	"kevinboyette/algorithms/str"
 )
 
 func TestSimpleCompression(t *testing.T) {
 	cases := map[string]struct {
-		testParam string
-		expected  string
+		given string
+		want  string
 	}{
 		"multiple instances of letters":             {"aaaabbbccdaa", "a4b3c2d1a2"},
 		"empty string":                              {"", ""},
@@ -18,14 +16,13 @@ func TestSimpleCompression(t *testing.T) {
 		"multiple instances of letters in all caps": {"AAAABBBCCDAA", "a4b3c2d1a2"},
 	}
 
-	for name, tc := range cases {
+	for name, tt := range cases {
 		t.Run(name, func(t *testing.T) {
-			actual := str.SimpleCompression(tc.testParam)
-			expected := tc.expected
-			if actual != expected {
+			actual := SimpleCompression(tt.given)
+			if actual != tt.want {
 				t.Errorf("During %s; expected %v and got %v",
 					name,
-					tc.expected,
+					tt.want,
 					actual,
 				)
 			}

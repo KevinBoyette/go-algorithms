@@ -1,14 +1,13 @@
-package str_test
+package str
 
 import (
-	"kevinboyette/algorithms/str"
 	"testing"
 )
 
 func TestToCamelCase(t *testing.T) {
 	cases := map[string]struct {
-		testParam string
-		expected  string
+		given string
+		want  string
 	}{
 		"empty string":      {"", ""},
 		"simple":            {"simple", "simple"},
@@ -16,14 +15,14 @@ func TestToCamelCase(t *testing.T) {
 		"snake_case":        {"the_weekend_warrior", "theWeekendWarrior"},
 		"caps first letter": {"The-Weekend-Warrior", "TheWeekendWarrior"},
 	}
-	for name, tc := range cases {
+	for name, tt := range cases {
 		t.Run(name, func(t *testing.T) {
-			actual := str.ToCamelCase(tc.testParam)
-			expected := tc.expected
-			if actual != expected {
+			actual := ToCamelCase(tt.given)
+
+			if actual != tt.want {
 				t.Errorf("During %s; expected %v and got %v",
 					name,
-					tc.expected,
+					tt.want,
 					actual,
 				)
 			}
@@ -34,6 +33,6 @@ func TestToCamelCase(t *testing.T) {
 
 func BenchmarkToCamelCase(b *testing.B) {
 	for n := 0; n < b.N; n++ {
-		str.ToCamelCase("the-Weekend-warrior")
+		ToCamelCase("the-Weekend-warrior")
 	}
 }

@@ -1,15 +1,13 @@
-package str_test
+package str
 
 import (
 	"testing"
-
-	"kevinboyette/algorithms/str"
 )
 
 func TestValidatingDelimiters(t *testing.T) {
 	cases := map[string]struct {
-		testParam string
-		expected  bool
+		given string
+		want  bool
 	}{
 		"a pair of parenthesis":      {"()", true},
 		"matching, but nested":       {"", true},
@@ -18,14 +16,13 @@ func TestValidatingDelimiters(t *testing.T) {
 		"not matching and different": {"(]", false},
 	}
 
-	for name, tc := range cases {
+	for name, tt := range cases {
 		t.Run(name, func(t *testing.T) {
-			actual := str.ValidDelimiters(tc.testParam)
-			expected := tc.expected
-			if actual != expected {
+			actual := ValidDelimiters(tt.given)
+			if actual != tt.want {
 				t.Errorf("During %s; expected %v and got %v",
 					name,
-					tc.expected,
+					tt.want,
 					actual,
 				)
 			}
