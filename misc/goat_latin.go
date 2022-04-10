@@ -2,6 +2,7 @@ package misc
 
 import "strings"
 
+// ToGoatLatin a string (as seen in interviews and codewars).
 func ToGoatLatin(s string) string {
 	vowels := map[uint8]bool{
 		'a': true,

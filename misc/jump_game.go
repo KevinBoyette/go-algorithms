@@ -8,7 +8,7 @@ func max(first, next int) int {
 	return next
 }
 
-// canJump solves the problem defined at
+// CanJump solves the problem defined at
 // https://leetcode.com/problems/jump-game
 func CanJump(nums []int) bool {
 	last := 0

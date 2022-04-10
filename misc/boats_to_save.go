@@ -3,6 +3,7 @@ package misc
 // https://leetcode.com/problems/boats-to-save-people/
 import "sort"
 
+// NumRescueBoats needed to save people.
 func NumRescueBoats(people []int, limit int) int {
 	numberOfTrips := len(people)
 	i := 0
