@@ -11,8 +11,8 @@ func maxOf(x, y int) int {
 // Given an integer array nums, find the contiguous subarray  (containing at
 // least one number) which has the largest sum and return its sum.
 //
-//A subarray is a contiguous part of an array.
-//https://leetcode.com/problems/maximum-subarray/
+// A subarray is a contiguous part of an array.
+// https://leetcode.com/problems/maximum-subarray/
 func MaxSubArray(nums []int) int {
 	if len(nums) == 0 {
 		return 0

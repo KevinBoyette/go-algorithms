@@ -3,7 +3,6 @@ package exp
 // FastExponents uses the squaring method to
 // calculate the exponentiation faster than
 // the naive method.
-//
 func FastExponents(x, y int) int {
 	result := 1
 	if y == 0 {

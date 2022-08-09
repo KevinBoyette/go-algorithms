@@ -5,7 +5,7 @@ import "math/rand"
 // QuickSortRecur will sort your slice quickly, but also
 // recursively.
 //
-//Should not be used with large slices
+// Should not be used with large slices
 func QuickSortRecur(list []int) []int {
 	listLength := len(list)
 	if listLength <= 1 {

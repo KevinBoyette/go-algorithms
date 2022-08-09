@@ -17,7 +17,8 @@ func MergeSort(list []int) []int {
 // Merge is a helper function for MergeSort
 //
 // Example:
-// 	Merge([]int{2,0,3},[]int{-1,0 -2}) -> []int{-1, 0, -2, 2, 0, 3}
+//
+//	Merge([]int{2,0,3},[]int{-1,0 -2}) -> []int{-1, 0, -2, 2, 0, 3}
 func Merge(left, right []int) []int {
 	ret := make([]int, 0, len(left)+len(right))
 	for len(left) > 0 || len(right) > 0 {

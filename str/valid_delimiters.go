@@ -4,9 +4,10 @@ package str
 // whether the delimiters are balanced or not.
 //
 // Examples:
-// 		ValidDelimiters("()") -> true
-// 		ValidDelimiters("[](){}") -> true
-// 		ValidDelimiters("[}") -> false
+//
+//	ValidDelimiters("()") -> true
+//	ValidDelimiters("[](){}") -> true
+//	ValidDelimiters("[}") -> false
 func ValidDelimiters(word string) bool {
 	var left []rune
 	delims := map[rune]rune{'(': ')', '{': '}', '[': ']', '<': '>'}

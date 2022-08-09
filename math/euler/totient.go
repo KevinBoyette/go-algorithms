@@ -5,19 +5,22 @@ package euler
 // Usually denoted with the greek symbol for phi.
 //
 // Example:
-// 	Totient(10) == 4
-// 		(1, 3, 7, 9) are less than 10,
-// 		but have no common factors with 10
+//
+//	Totient(10) == 4
+//		(1, 3, 7, 9) are less than 10,
+//		but have no common factors with 10
 //
 // Example:
-// 	Totient(9) == 6
-// 		(1, 2, 4, 5, 7, 8) are less than 10,
-// 		but have no common factors with 9
+//
+//	Totient(9) == 6
+//		(1, 2, 4, 5, 7, 8) are less than 10,
+//		but have no common factors with 9
 //
 // Example:
-// 	Totient(5) == 4
-// 		(1, 2, 3, 4) are less than 5 and since 5 is prime,
-// 		all the numbers less than 5 are relatively prime to 5.
+//
+//	Totient(5) == 4
+//		(1, 2, 3, 4) are less than 5 and since 5 is prime,
+//		all the numbers less than 5 are relatively prime to 5.
 func Totient(n uint) uint {
 	//  In the spirit of math,
 	//  r == resulting int,
