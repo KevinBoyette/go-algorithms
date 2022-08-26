@@ -7,7 +7,6 @@ run:
 
 linters:
   enable:
-    - deadcode
     - depguard
     - errcheck
     - exportloopref
@@ -20,12 +19,10 @@ linters:
     - misspell
     - revive
     - staticcheck
-    - structcheck
     - typecheck
     - unconvert
     - unparam
     - unused
-    - varcheck
 
 issues:
   exclude-use-default: false
