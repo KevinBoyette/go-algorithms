@@ -29,7 +29,6 @@ func TestCanJump(t *testing.T) {
 					actual,
 				)
 			}
-
 		})
 	}
 }

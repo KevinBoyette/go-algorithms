@@ -41,6 +41,7 @@ func reduceTestTable() map[string]reduceTestCase {
 func identity(x int) int {
 	return x
 }
+
 func plus1(x int) int {
 	return x + 1
 }

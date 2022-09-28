@@ -19,5 +19,4 @@ func SumOfUniqueElements(nums []int) int {
 	}
 
 	return total
-
 }

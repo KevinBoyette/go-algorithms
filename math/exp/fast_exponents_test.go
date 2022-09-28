@@ -30,5 +30,4 @@ func TestFastExponents(t *testing.T) {
 			}
 		})
 	}
-
 }

@@ -36,7 +36,6 @@ func TestMaxSubArray(t *testing.T) {
 					actual,
 				)
 			}
-
 		})
 	}
 }

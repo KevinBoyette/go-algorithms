@@ -26,5 +26,4 @@ func TestEulerTotient(t *testing.T) {
 			}
 		})
 	}
-
 }

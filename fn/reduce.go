@@ -9,7 +9,6 @@ func Reduce(f func(int) int, list []int) int {
 			returnValue = listValue
 		} else {
 			returnValue += f(listValue)
-
 		}
 	}
 	return returnValue

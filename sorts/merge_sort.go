@@ -11,7 +11,6 @@ func MergeSort(list []int) []int {
 	left := MergeSort(list[:mid])
 	right := MergeSort(list[mid:])
 	return Merge(left, right)
-
 }
 
 // Merge is a helper function for MergeSort

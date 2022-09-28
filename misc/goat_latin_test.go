@@ -34,5 +34,4 @@ func TestGoatLatin(t *testing.T) {
 			}
 		})
 	}
-
 }

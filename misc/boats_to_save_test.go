@@ -25,7 +25,6 @@ func TestNumRescueBoats(t *testing.T) {
 					got,
 				)
 			}
-
 		})
 	}
 }

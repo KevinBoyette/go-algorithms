@@ -28,7 +28,6 @@ func TestToCamelCase(t *testing.T) {
 			}
 		})
 	}
-
 }
 
 func BenchmarkToCamelCase(b *testing.B) {

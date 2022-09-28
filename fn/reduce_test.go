@@ -17,7 +17,6 @@ func TestReduceFunction(t *testing.T) {
 					actual,
 				)
 			}
-
 		})
 	}
 }

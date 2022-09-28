@@ -17,7 +17,6 @@ func BubbleSort(list []int) []int {
 				list[j+1] = temp
 			}
 		}
-
 	}
 
 	return list
